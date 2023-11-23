@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-	double a=-1, n=1, n1;
+	double a = -1, n = 1, n1;
 	for (; a < 0;)
 	{
 		cout << "请输入a的值(a>=0)" << endl;
@@ -11,12 +11,17 @@ int main()
 	}
 	n = a;
 	n1 = a;
+	if (a == 0)
+	{
+		cout << "a的平方根为" << 0 << endl;
+		return 0;
+	}
 	do
 	{
 		n = n1;
 		n1 = (n + a / n) / 2.0;
-		
-	} while (fabs(n1-n)>1e-5);
+
+	} while (fabs(n1 - n) > 1e-5);
 
 	cout << "a的平方根为" << n1 << endl << "可以使|xn+1 -xn|<10 -10或更小" << endl;
 	do
